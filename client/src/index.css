@@ -125,8 +125,8 @@ body {
   background-attachment: fixed;
   display: flex;
   justify-content: center;
-  flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
 .preload .progress {
