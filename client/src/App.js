@@ -57,7 +57,8 @@ const App = () => {
                 const req = await axios.get(`https://atamoascension.xyz/api/asahitrials/address/${address}`);
                 const res = await req.data;
                 if (res.success) {
-                    const tweetContent = `I've solved the second @AtamoAscension Trial and ascended%0A%0ACome ascend with me%0A%0A`;
+                    const tweetContent = `I've solved the second @AtamoAscension Trial and Ascended.%0A%0ACome ascend with me!%0A%0A
+                    https://enter.asahitrials.xyz`;
                     const link = `https://twitter.com/intent/tweet?text=${tweetContent}&url=https://enter.asahitrials.xyz`;
                     window.open(link, "_blank");
                 } else {
