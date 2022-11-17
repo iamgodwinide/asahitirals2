@@ -15,11 +15,9 @@ const App = () => {
     const alert = useAlert()
 
     const handleOpenSite = () => {
-        if (fontsloaded) {
-            setWindowLoading(false);
-            video1.current.style.zIndex = 1;
-            video1.current.play();
-        }
+        setWindowLoading(false);
+        video1.current.style.zIndex = 1;
+        video1.current.play();
     }
 
     const handleVideo1Ended = () => {
@@ -74,11 +72,6 @@ const App = () => {
     }
 
 
-    useEffect(() => {
-        window.addEventListener("load", () => setFontsloaded(true));
-    }, []);
-
-
 
 
     return (
@@ -125,19 +118,7 @@ const App = () => {
             {
                 windowLoading
                 && <div className='preload'>
-                    {
-                        fontsloaded
-                            ? <h1 onClick={handleOpenSite}>click to start</h1>
-                            : <div className="progress">
-                                <div className="progress-bar progress-bar-striped progress-bar-animated"
-                                    role="progressbar"
-                                    aria-label="Animated striped example"
-                                    aria-valuenow="100"
-                                    aria-valuemin="0"
-                                    aria-valuemax="100"
-                                    style={{ width: "100%" }}></div>
-                            </div>
-                    }
+                    <h1 onClick={handleOpenSite}>click to start</h1>
                 </div>
             }
         </div>
