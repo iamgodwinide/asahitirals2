@@ -59,6 +59,7 @@ const App = () => {
                 if (res.success) {
                     const tweetContent = `I've solved the second @AtamoAscension Trial and Ascended.%0A%0ACome ascend with me!%0A%0A`;
                     const link = `https://twitter.com/intent/tweet?text=${tweetContent}&url=https://enter.asahitrials.xyz`;
+                    alert.success("Address submitted")
                     window.open(link, "_blank");
                 } else {
                     alert.error(res.msg)
